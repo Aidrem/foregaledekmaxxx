@@ -20,6 +20,14 @@
   /* Scenes */
   .scene{display:none;}
   .scene.active{display:block;}
+  .scene.active{display:block;}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+}
+
 
   /* Game UI */
   .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start}
@@ -89,7 +97,7 @@
 
         <div class="card">
           <h2>Notes</h2>
-          <div class="small">เล่นเรื่อย ๆ — หากชนะในรอบที่ 2 โดยเลือก ✌️ (scissors) จะชนะทันทีตามกติกาพิเศษ</div>
+          <div class="small">เล่นเรื่อย ๆ — จนชนะ (scissors)</div>
         </div>
 
         <div class="card">
@@ -104,15 +112,20 @@
       </div>
     </div>
 
-    <!-- SCENE 2: Do you love me? -->
-    <div id="scene-love" class="scene">
-      <div class="card">
+<!-- SCENE 2: Do you love me? -->
+<div id="scene-love" class="scene">
+    <div class="card">
         <h2>Do you love me?</h2>
         <div style="height:8px"></div>
         <div class="love-wrap">
-          <div class="love-actions">
-            <button id="yesLove" class="yes-btn">Yes</button>
-            <button id="noLove" class="no-btn">No</button>
+            <div class="btn-container">
+                <button id="yesLove" class="yes-btn">Yes</button>
+                <button id="noLove" class="no-btn">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
           </div>
           <div class="small" id="loveNote">Win a round to unlock this</div>
         </div>
